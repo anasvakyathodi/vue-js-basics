@@ -56,7 +56,11 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
-
+.task-body >ul> p{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
 .task-body > ul > li{
     font-size: 1.2rem;
     text-transform: capitalize;
