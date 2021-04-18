@@ -8,17 +8,21 @@
     <title>Simple HTML Todo</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header"><h2>Todos</h2></div>
-      <div class="task-body">
-        <ul class="task-list"></ul>
-      </div>
-      <div class="input-container">
-        <input/>
-        <button>Add Task</button>
+    <div id="app">
+      <div class="container">
+        <div class="header"><h2>Todos</h2></div>
+        <div class="task-body">
+          <ul class="task-list" v-if="tasks" >
+            <li  v-for="(task,index) in tasks" v-bind:key="index" v-on:click="removeTask(index)">{{task}}</li>
+          </ul>
+        </div>
+        <div class="input-container">
+        <input type="text" id="task" v-on:keyup.enter="addTask" v-model="enteredValue" />
+        <button v-on:click="addTask" >Add Task</button>
+        </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="index.js"></script>
   </body>
 </html>

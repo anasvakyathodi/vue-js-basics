@@ -52,12 +52,16 @@ body{
 .task-body > ul{
     padding: 0;
     margin: 1rem;
+    height: 20rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .task-body > ul > li{
     font-size: 1.2rem;
     text-transform: capitalize;
     margin:0 auto;
+    cursor: pointer;
     list-style-type: none;
 }
 .task-body > ul > li::after{
